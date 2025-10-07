@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+My Next Task
+مشروع ويب مبني باستخدام Next.js و React لعرض تفاصيل المنتجات وصفحة الفوتر بشكل احترافي بناءً على تصميم Figma.
+المميزات
 
-## Getting Started
+صفحة تفاصيل المنتج مع:
+صور متعددة للمنتج مع معاينة جانبية.
+خيارات قابلة للاختيار (اللون، المقاس، الكمية) مع أزرار تفاعلية.
+أسعار وعروض تخفيضات (مثل 25% OFF).
+أيقونات للوishlist والعربة.
 
-First, run the development server:
 
-```bash
+تصميم متجاوب باستخدام Tailwind CSS.
+فوتر احترافي يحتوي على:
+قسم Customer Service مع معلومات الاتصال (هاتف، إيميل، عنوان).
+روابط التواصل الاجتماعي (فيسبوك، إنستغرام، تويتر، لينكدإن، واتساب، تليجرام).
+نموذج اشتراك في النشرة البريدية.
+
+
+
+بدء التشغيل
+
+تثبيت الحزم:
+npm install
+
+
+تشغيل المشروع:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+افتح المتصفح على http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+هيكل المشروع
+src/app/
+  ├── _components/
+  │   ├── Comment.tsx             # كومنتات واراء العملاء والتقيم 
+  │   ├── Footer.tsx              # مكون الفوتر مع Customer Service وSocial Icons
+  │   ├── Navbar.tsx              # مكون الناف بار مع Customer Service وSocial Icons
+  │   ├── ProductDetails.tsx      # مكون تفاصيل المنتج  مع Customer Service وSocial Icons
+  │   ├── RatingReviews.tsx       # مكون تقيم الصفحه  مع Customer Service وSocial Icons
+  │   └── SimilarItems.tsx        # مكون تفاصيل المنتج مع الصور والخيارات
+  ├── layout.tsx                  # الـ layout العام
+  ├── page.tsx                    # الصفحة تسجيل الدخول 
+  ├── product.tsx                 # بنرن فيها كل component
+  ├── product.tsx                 # صفحت انشاء حساب                                     فيه مشكله فى api 
+  ├── register.tsx                # بنرن فيها كل component               
+  └── verify.tsx                  # صفحت verify                                           فيه مشكله فى api 
+public/                           # مجلد الصور (مثل dress1.jpg, blouse1.jpg)
 
-To learn more about Next.js, take a look at the following resources:
+المتطلبات
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Node.js 18 أو أحدث
+npm أو yarn
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+المساهمة
+للمساهمة في المشروع، يرجى عمل Fork ثم إرسال Pull Request.
+الرخصة
+هذا المشروع مخصص للاستخدام الشخصي فقط.
