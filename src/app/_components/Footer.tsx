@@ -1,11 +1,7 @@
 "use client";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPhone,
-  faEnvelope,
-  faMapMarkerAlt,
-} from "@fortawesome/free-solid-svg-icons";
+
 import {
   faFacebookF,
   faInstagram,
@@ -22,7 +18,7 @@ export default function Footer() {
       style={{ backgroundImage: "url('/kids-photography 1.png')" }}
     >
       <div className=" bg-black/60  text-white flex flex-col lg:flex-row justify-between items-center py-10 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat">
-        {/* Top Section - Customer Service */}
+        
         <div className="w-full lg:w-3/12  gap-6 mb-8 text-white">
           <img src="/Layer_1.png" alt="Logo" className="h-12" />
           <p className="te">
@@ -89,7 +85,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="w-full lg:w-3/12  gap-6 mb-8 ">
-          {/* Send Email Section */}
+         
           <h2 className="text-2xl font-bold mb-4">Send Email</h2>
           <form className="w-full flex flex-col items-center">
             <div className="flex w-full bg-white rounded-2xl overflow-hidden relative">
@@ -181,7 +177,7 @@ export default function Footer() {
             </div>
           </form>
         </div>
-        {/* End Send Email Section */}
+      
       </div>
     </footer>
   );

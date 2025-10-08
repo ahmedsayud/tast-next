@@ -51,7 +51,7 @@ export default function ProductDetails() {
 
   return (
     <div>
-           {/* Breadcrumb */}
+          
       <div className="max-w-6xl mx-auto bg-[#F5F5F5] mt-4 py-2 px-5 sm:px-6 md:px-8 rounded-xl shadow-md">
         <p className="text-sm md:text-2xl mb-0">
           Home <FontAwesomeIcon icon={faChevronRight} /> Our Category <FontAwesomeIcon icon={faChevronRight} />{" "}
@@ -59,17 +59,17 @@ export default function ProductDetails() {
         </p>
       </div>
 
-      {/* Product Section */}
+      
       <div className="max-w-6xl mx-auto mt-8 flex flex-col md:flex-row justify-between items-center sm:px-4 md:px-0">
         <div className="w-full md:w-1/2 lg:w-4/12">
-          {/* Main Carousel */}
+      
           <div className="relative w-full h-150 bg-gray-300 rounded-xl overflow-hidden">
             <img
               src={images[currentIndex].src}
               alt={images[currentIndex].alt}
               className="w-full h-full object-cover"
             />
-            {/* Buttons (Modified to dots as per your code) */}
+            
             <div className="absolute top-4 w-full flex justify-center space-x-2">
               {images.map((image, index) => (
                 <div
@@ -81,7 +81,7 @@ export default function ProductDetails() {
                 ></div>
               ))}
             </div>
-            {/* Arrows */}
+          
             <button
               onClick={prevSlide}
               className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-[#BE968E] text-black w-10 h-10 rounded-full hover:bg-gray-600"
@@ -96,7 +96,7 @@ export default function ProductDetails() {
             </button>
           </div>
 
-          {/* Thumbnails */}
+        
           <div className="mt-4 flex justify-between space-x-4">
             {images.map((image, index) => (
               <div
@@ -115,7 +115,7 @@ export default function ProductDetails() {
             ))}
           </div>
         </div>
-        {/* r */}
+       
         <div className="w-full md:w-1/2 lg:w-7/12 px-2 sm:px-4 md:px-6 ">
           <div className="flex justify-between items-center">
             <div className="bg-white text-[#BE968E] px-3 py-1 rounded-full border border-[#BE968E]">
@@ -154,9 +154,9 @@ export default function ProductDetails() {
               nonummy Lorem ipsum dolor sit amet, diam nonummy
             </p>
             <div className="w-full h-0.5 bg-gray-200 my-3"></div>
-            {/*  */}
+          
             <div className="w-1/2 space-y-3 ">
-              {/* Type Dropdown */}
+              
               <div className="relative">
                 <label className="block text-sm font-semibold mb-0">Type</label>
                 <button
@@ -193,7 +193,6 @@ export default function ProductDetails() {
                 )}
               </div>
 
-              {/* Size Dropdown */}
               <div className="relative">
                 <label className="block text-sm font-semibold mb-1">Size</label>
                 <button
@@ -231,10 +230,10 @@ export default function ProductDetails() {
               </div>
             </div>{" "}
             <div className="w-full max-w-sm mt-2">
-              {/* العنوان */}
+             
               <h3 className="text-lg font-semibold mb-3">Colors</h3>
 
-              {/* الألوان */}
+             
               <div className="flex items-center gap-4">
                 {colors.map((color) => (
                   <div key={color.name} className="flex flex-col items-center">
@@ -265,9 +264,9 @@ export default function ProductDetails() {
                 ))}
               </div>
             </div>
-            {/* + - */}
+            
             <div className="mt-2">
-              {/* العنوان */}
+              
               <div className="flex items-baseline gap-2 mb-3">
                 <h3 className="text-lg font-semibold">Quantity</h3>
                 <span className="text-gray-500 text-sm">
@@ -277,7 +276,7 @@ export default function ProductDetails() {
               <div className="flex items-center justify-between w-full">
                 <div className="flex items-center justify-between w-1/2 max-w-sm">
                   <div className="flex items-center gap-2 rounded-2xl p-2 bg-gray-200">
-                    {/* زرار النقص */}
+                   
                     <button
                       onClick={decrease}
                       className="w-8 h-8 flex items-center justify-center rounded-xl  bg-white hover:bg-gray-200 transition"
@@ -288,12 +287,12 @@ export default function ProductDetails() {
                       />
                     </button>
 
-                    {/* العدد */}
+             
                     <span className="w-10 text-center font-semibold text-lg">
                       {quantity.toString().padStart(2, "0")}
                     </span>
 
-                    {/* زرار الزيادة */}
+                   
                     <button
                       onClick={increase}
                       className="w-8 h-8 flex items-center justify-center rounded-xl  bg-white hover:bg-gray-200 transition"
@@ -305,7 +304,7 @@ export default function ProductDetails() {
                     </button>
                   </div>
 
-                  {/* السعر الإجمالي */}
+                
                   <div className="text-lg font-semibold">
                     ${(quantity * pricePerPiece).toFixed(2)}
                   </div>
@@ -315,7 +314,7 @@ export default function ProductDetails() {
                   Add To Cart <FontAwesomeIcon icon={faBagShopping} size="lg" />
                 </button>
               </div>
-              {/* التحكم في العدد */}
+              
             </div>
           </div>
         </div>

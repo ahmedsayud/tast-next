@@ -20,9 +20,7 @@ export default function RatingReviews() {
         Rating & Reviews
       </h2>
 
-      {/* Rating Section */}
       <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-8 md:gap-12 w-full p-4 md:p-6">
-        {/* Left Section - Main Rating */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left w-full md:w-1/3">
           <p className="text-7xl md:text-9xl font-bold leading-none">
             4.5
@@ -39,7 +37,6 @@ export default function RatingReviews() {
           </div>
         </div>
 
-        {/* Middle Section - Rating Bars */}
         <div className="flex flex-col justify-center items-center md:items-start w-full md:w-1/3">
           {ratings.map((ratingItem, index) => (
             <div key={index} className="w-full max-w-xs sm:max-w-sm mb-3">
@@ -57,7 +54,6 @@ export default function RatingReviews() {
           ))}
         </div>
 
-        {/* Right Section - Total Reviews */}
         <div className="flex flex-col justify-center items-center text-center w-full md:w-1/3">
           <p className="text-gray-600 text-sm md:text-base">Total Reviews</p>
           <p className="text-5xl md:text-7xl font-bold my-2">3.0K</p>

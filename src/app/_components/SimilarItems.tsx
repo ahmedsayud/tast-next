@@ -178,7 +178,6 @@ export default function SimilarItems() {
           ))}
         </div>
 
-        {/* أزرار التنقل */}
         <div className="flex justify-center mt-4">
           <button
             onClick={prevPage}

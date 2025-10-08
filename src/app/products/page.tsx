@@ -4,46 +4,24 @@ import { useRouter } from "next/navigation";
 import Navbar from "@/app/_components/Navbar";
 import ProductDetails from "@/app/_components/ProductDetails";
 import RatingReviews from "../_components/RatingReviews";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Comment from "../_components/Comment";
 import SimilarItems from "../_components/SimilarItems";
 import Footer from "../_components/Footer";
 export default function Products() {
-  const [products] = useState([
-    {
-      id: 1,
-      name: "Product Name",
-      price: 49.99,
-      rating: 4.5,
-      reviews: 3000,
-      description: "Product description...",
-    },
-    {
-      id: 2,
-      name: "Related Product 1",
-      price: 29.99,
-    },
-    {
-      id: 3,
-      name: "Related Product 2",
-      price: 39.99,
-    },
-  ]);
+ 
   const router = useRouter();
   const [token, setToken] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
-  const [isLoading, setIsLoading] = useState(true); // لتحديد حالة التحميل
+  const [isLoading, setIsLoading] = useState(true); 
 
   useEffect(() => {
-    // نتحقق من الـ localStorage فورًا
     const localToken =
       typeof window !== "undefined" ? localStorage.getItem("token") : null;
     setToken(localToken);
-    setIsLoading(false); // بتأكد إن التحميل خلص
+    setIsLoading(false); 
 
     if (!localToken) {
-      setShowPopup(true); // أظهر الـ popup لو مش فيه token
+      setShowPopup(true);
     }
   }, []);
   const img = "/3d-vertical-background-with-abstract-style 1.png";
@@ -52,7 +30,6 @@ export default function Products() {
     router.push("/");
   };
 
-  // لو التحميل لسه مستمر، نرجع null لحد ما الـ token يتحدد
   if (isLoading) return null;
 
   if (!token && showPopup) {
@@ -72,7 +49,7 @@ export default function Products() {
     );
   }
 
-  if (!token) return null; // لمنع التحميل لو مش مسجل دخول
+  if (!token) return null; 
 
   return (
     <div className="min-h-screen bg-white ">

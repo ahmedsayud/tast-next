@@ -28,7 +28,7 @@ export default function Verify() {
         localStorage.setItem("token", data.data?.token || token);
         router.push("/products");
       } else if (data.message === "هذا الحساب مفعل") {
-        // لو الحساب مفعل، روح لـ products
+      
         router.push("/products");
       } else {
         alert(

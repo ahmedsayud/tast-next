@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false); // للتحكم في الـ toggle menu
+  const [isOpen, setIsOpen] = useState(false);
 
   const items = [
     { icon: faHouse, text: "Home" },
@@ -21,16 +21,15 @@ export default function Navbar() {
   ];
 
   const icons = [
-    { icon: "/shopping bag.png", icon2: "" }, // صورة الكيس
-    { icon: "/love.png", icon2: "" }, // صورة القلب
-    { icon: "/user.png", icon2: "" }, // صورة المستخدم
+    { icon: "/shopping bag.png", icon2: "" },
+    { icon: "/love.png", icon2: "" },
+    { icon: "/user.png", icon2: "" }, 
   ];
 
   return (
     <div className="w-full fixed top-0 left-0 bg-white text-black px-4 md:px-20 py-2 flex shadow-md z-50">
       <div className="w-full lg:w-7/12 flex justify-between items-center">
         <img src="/Layer_1.png" alt="Logo" className="h-10" />
-        {/* Menu Toggle Button for Mobile */}
         <button
           className="lg:hidden text-black focus:outline-none "
           onClick={() => setIsOpen(!isOpen)}
@@ -50,7 +49,6 @@ export default function Navbar() {
             ></path>
           </svg>
         </button>
-        {/* Main Menu (Hidden on Mobile, Shown on Medium+) */}
         <div className="hidden lg:flex justify-end w-full">
           {items.map((item, index) => (
             <div key={index} className="flex items-center mx-3">
@@ -59,7 +57,6 @@ export default function Navbar() {
             </div>
           ))}
         </div>
-        {/* Mobile Menu */}
         {isOpen && (
           <div className="lg:hidden absolute top-12 left-0 w-full bg-white shadow-md">
             {items.map((item, index) => (
@@ -71,7 +68,6 @@ export default function Navbar() {
           </div>
         )}
       </div>
-      {/* Right Side Icons (Responsive) */}
       <div className="hidden lg:flex lg:w-5/12 justify-end items-center">
       <div className=" flex w-2/4 justify-end">
         <ul className="flex justify-between w-full p-2">
