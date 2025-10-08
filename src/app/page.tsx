@@ -10,18 +10,17 @@ export default function Login() {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const router = useRouter();
 
-  const handleChange = (e) => {
+const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       const { data } = await axios.post(`${BASE_URL}/auth/login`, formData);
       if (data.status) {
-        // تحقق من status بدل token
-        localStorage.setItem("token", data.data.token); // احفظ من data.token
-        localStorage.setItem("userName", data.data.name || "User"); // استخدم name بدل fullName
+        localStorage.setItem("token", data.data.token); 
+        localStorage.setItem("userName", data.data.name || "User"); 
         router.push("/products");
       } else {
         alert("Login failed: " + (data.message || "Unknown error"));
@@ -74,7 +73,7 @@ export default function Login() {
             Register here
           </Link>
         </p>
-        {/* زر Verify (اختياري) */}
+        
         <p className="mt-2 text-center text-gray-600">
           <Link href="/verify" className="text-[#BE968E] hover:underline">
             Verify Account (if needed)

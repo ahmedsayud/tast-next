@@ -10,7 +10,7 @@ import Footer from "../_components/Footer";
 export default function Products() {
  
   const router = useRouter();
-  const [token, setToken] = useState(null);
+const [token, setToken] = useState<string | null>(null);
   const [showPopup, setShowPopup] = useState(false);
   const [isLoading, setIsLoading] = useState(true); 
 
@@ -24,7 +24,6 @@ export default function Products() {
       setShowPopup(true);
     }
   }, []);
-  const img = "/3d-vertical-background-with-abstract-style 1.png";
   const handleClosePopup = () => {
     setShowPopup(false);
     router.push("/");
